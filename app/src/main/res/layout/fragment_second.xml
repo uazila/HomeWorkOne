@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.secondFragment.SecondFragment">
+
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/modern_antiqua"
+        android:text="@string/hello_blank_fragment"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="32sp" />
+
+</RelativeLayout>
