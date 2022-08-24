@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
 
-
         val animDrawable = binding.root.background as AnimationDrawable
         animDrawable.setEnterFadeDuration(2000)
         animDrawable.setExitFadeDuration(4000)
