@@ -3,28 +3,27 @@ package com.example.lesson1homework.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainViewModel:ViewModel() {
+class MainViewModel : ViewModel() {
 
-    private var mCounter=0
-    private var mHistory=""
+    private var mCounter = 0
+    private var mHistory = ""
 
-    var history=MutableLiveData<String>()
-    var counter=MutableLiveData<Int>()
+    var historyLiveData = MutableLiveData<String>()
+    var counterLiveData = MutableLiveData<Int>()
 
-    fun increase(){
+    fun increment() {
         mCounter++
-        counter.value=mCounter
-        mHistory="$mHistory\n+"
-        history.value=mHistory
+        counterLiveData.value = mCounter
+        mHistory = "$mHistory\n+"
+        historyLiveData.value = mHistory
     }
-    fun decrease(){
+
+    fun decrement() {
         mCounter--
-        counter.value=mCounter
-        mHistory="$mHistory\n-"
-        history.value=mHistory
+        counterLiveData.value = mCounter
+        mHistory = "$mHistory\n-"
+        historyLiveData.value = mHistory
     }
-
-
 
 
 }

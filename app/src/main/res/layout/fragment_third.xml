@@ -12,11 +12,10 @@
         <TextView
             android:layout_marginTop="110dp"
             android:id="@+id/tv_res"
-            android:textColor="@color/teal_200"
+            android:textColor="@color/black"
             android:textSize="32sp"
             android:textAlignment="center"
-            android:text="history"
-            android:fontFamily="@font/modern_antiqua"
+            android:text="Total"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

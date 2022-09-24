@@ -1,12 +1,11 @@
 package com.example.lesson1homework.ui.thirdFragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.lesson1homework.R
 import com.example.lesson1homework.databinding.FragmentThirdBinding
 import com.example.lesson1homework.ui.MainViewModel
 
@@ -24,18 +23,17 @@ class ThirdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        binding= FragmentThirdBinding.inflate(layoutInflater)
+        binding = FragmentThirdBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.history.observe(viewLifecycleOwner,{
-        binding.tvRes.text = it
-        })
+        viewModel.historyLiveData.observe(viewLifecycleOwner) { data ->
+            binding.tvRes.text = data
+        }
 
     }
-
 
 
 }

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.lesson1homework.R
 import com.example.lesson1homework.databinding.FragmentFirstBinding
 import com.example.lesson1homework.ui.MainViewModel
 
@@ -33,10 +32,10 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         with(binding){
             btnIncrease.setOnClickListener {
-                viewModel.increase()
+                viewModel.increment()
             }
             btnDecrease.setOnClickListener {
-                viewModel.decrease()
+                viewModel.decrement()
             }
         }
     }

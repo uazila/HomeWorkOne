@@ -27,20 +27,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-
-        val animDrawable = binding.root.background as AnimationDrawable
-        animDrawable.setEnterFadeDuration(2000)
-        animDrawable.setExitFadeDuration(4000)
-        animDrawable.start()
-
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         val adapter=PagerAdapter(this,fragmentList)
 
         binding.viewPager.adapter=adapter
+
         TabLayoutMediator(binding.tabLayout,binding.viewPager){ tab: TabLayout.Tab, i: Int ->
             tab.text = fragmetTitles[i]
         }.attach()
